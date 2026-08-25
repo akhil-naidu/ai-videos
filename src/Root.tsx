@@ -6,6 +6,11 @@ import {
   DEMO_DURATION_IN_FRAMES,
 } from "../presentations/demo-architecture/Main";
 import { meta as demoMeta } from "../presentations/demo-architecture/meta";
+import {
+  DflowFlagship,
+  DFLOW_DURATION_IN_FRAMES,
+} from "../presentations/dflow-flagship/Main";
+import { meta as dflowMeta } from "../presentations/dflow-flagship/meta";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -21,7 +26,20 @@ export const RemotionRoot: React.FC = () => {
             fps={format.fps}
             width={format.width}
             height={format.height}
-            defaultProps={{}}
+          />
+        );
+      })}
+      {dflowMeta.formats.map((key) => {
+        const format = FORMAT_PRESETS[key];
+        return (
+          <Composition
+            key={`${dflowMeta.id}-${key}`}
+            id={`${dflowMeta.id}-${key}`}
+            component={DflowFlagship}
+            durationInFrames={DFLOW_DURATION_IN_FRAMES}
+            fps={format.fps}
+            width={format.width}
+            height={format.height}
           />
         );
       })}

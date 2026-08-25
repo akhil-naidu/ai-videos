@@ -10,7 +10,8 @@
     "@remotion/transitions": "4.0.517",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.517"
+    "remotion": "4.0.517",
+    "simple-icons": "^13.21.0"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.517",

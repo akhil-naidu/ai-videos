@@ -10,5 +10,17 @@
       "demo-architecture-9x16-4k"
     ],
     "studioPath": "/demo-architecture-16x9-1080"
+  },
+  {
+    "id": "dflow-flagship",
+    "title": "dFlow Flagship",
+    "description": "AI LABS–style — logos, centered diagrams, VO-ready. Drop audio in public/dflow-flagship/.",
+    "compositions": [
+      "dflow-flagship-16x9-1080",
+      "dflow-flagship-16x9-4k",
+      "dflow-flagship-9x16-1080",
+      "dflow-flagship-9x16-4k"
+    ],
+    "studioPath": "/dflow-flagship-16x9-1080"
   }
 ]
