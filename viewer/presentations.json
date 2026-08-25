@@ -1,0 +1,14 @@
+[
+  {
+    "id": "demo-architecture",
+    "title": "Demo Architecture",
+    "description": "Kit showcase — skeletons, wiring connectors, SPA page transitions.",
+    "compositions": [
+      "demo-architecture-16x9-1080",
+      "demo-architecture-16x9-4k",
+      "demo-architecture-9x16-1080",
+      "demo-architecture-9x16-4k"
+    ],
+    "studioPath": "/demo-architecture-16x9-1080"
+  }
+]

@@ -1,0 +1,21 @@
+# Dependencies / build
+node_modules/
+dist/
+out/
+build/
+.cache/
+
+# Remotion
+.remotion/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.log
+
+# Viewer local
+viewer/dist/

@@ -1,0 +1,33 @@
+{
+  "name": "ai-videos",
+  "version": "1.0.0",
+  "description": "Remotion presentation videos — kit + decks under presentations/",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.517",
+    "@remotion/google-fonts": "4.0.517",
+    "@remotion/transitions": "4.0.517",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.517"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.517",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "serve": "14.2.4",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src presentations && tsc",
+    "viewer": "serve viewer -p 5173",
+    "compositions": "remotion compositions"
+  }
+}

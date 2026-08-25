@@ -1,0 +1,29 @@
+---
+description: Core conventions for this Remotion presentation video repo
+alwaysApply: true
+---
+
+# ai-videos — project conventions
+
+## What this repo is
+
+Remotion app for programmatic presentation videos. Presentations live under `presentations/`. Shared motion UI lives under `src/kit/`.
+
+## Before coding
+
+1. Read `docs/superpowers/specs/2026-08-25-remotion-presentation-system-design.md` if touching architecture.
+2. Use Remotion agent skills (`remotion-best-practices` / `remotion-markup`) for Remotion APIs.
+3. Use project skill `remotion-presentation` when adding or editing decks.
+
+## Hard rules
+
+- Pin Remotion packages to **exact** versions (no `^`).
+- Animate kit components from **local** `useCurrentFrame()` so they work inside `Sequence`.
+- Register every presentation in `src/Root.tsx` with format variants from `src/formats.ts`.
+- Dark product UI tokens only via `src/kit/theme.ts` — no Inter/Roboto/Arial/system stacks; no purple-glow defaults.
+- Do not invent a script→audio auto-pipeline unless the user explicitly asks (v2).
+
+## Commands
+
+- Studio: `npm run studio` (or bun equivalent) → `http://localhost:3000`
+- Viewer: `npm run viewer` → local gallery

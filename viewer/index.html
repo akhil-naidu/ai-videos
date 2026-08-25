@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ai-videos — presentations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0e12;
+        --elevated: #151922;
+        --border: #2a3344;
+        --text: #e8edf5;
+        --muted: #8b97ab;
+        --cyan: #3ee0d0;
+        --amber: #f0a45d;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 600px at 10% -10%, #1a3040 0%, transparent 55%),
+          radial-gradient(900px 500px at 100% 0%, #2a2218 0%, transparent 50%),
+          var(--bg);
+      }
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+      .eyebrow {
+        font-family: "IBM Plex Mono", monospace;
+        color: var(--cyan);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        margin: 0 0 12px;
+      }
+      .lede {
+        color: var(--muted);
+        font-size: 1.125rem;
+        margin: 0 0 40px;
+        max-width: 36rem;
+      }
+      .card {
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--elevated) 88%, transparent);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 16px;
+      }
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 1.35rem;
+      }
+      .card p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      a {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 13px;
+        color: var(--bg);
+        background: var(--cyan);
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      a.secondary {
+        background: transparent;
+        color: var(--amber);
+        border: 1px solid var(--border);
+      }
+      .hint {
+        margin-top: 40px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      code {
+        color: var(--cyan);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">ai-videos</div>
+      <h1>Presentations</h1>
+      <p class="lede">
+        Local gallery. Start Remotion Studio, then open a composition from here.
+      </p>
+      <div id="list"></div>
+      <p class="hint">
+        Terminal:<br />
+        <code>npm run studio</code> → http://localhost:3000<br />
+        <code>npm run viewer</code> → http://localhost:5173
+      </p>
+    </main>
+    <script>
+      const STUDIO = "http://localhost:3000";
+      async function boot() {
+        const res = await fetch("./presentations.json");
+        const items = await res.json();
+        const root = document.getElementById("list");
+        root.innerHTML = items
+          .map((item) => {
+            const primary = `${STUDIO}${item.studioPath}`;
+            const comps = (item.compositions || [])
+              .map(
+                (id) =>
+                  `<a class="secondary" href="${STUDIO}/${id}" target="_blank" rel="noreferrer">${id}</a>`,
+              )
+              .join("");
+            return `<article class="card">
+              <h2>${item.title}</h2>
+              <p>${item.description || ""}</p>
+              <div class="links">
+                <a href="${primary}" target="_blank" rel="noreferrer">Open in Studio</a>
+                ${comps}
+              </div>
+            </article>`;
+          })
+          .join("");
+      }
+      boot().catch((err) => {
+        document.getElementById("list").innerHTML =
+          `<p class="hint">Failed to load presentations.json: ${err}</p>`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+---
+description: Docs and Cursor agent setup conventions for this repo
+globs: docs/**/*.md,.cursor/**/*
+alwaysApply: false
+---
+
+# Docs & agent setup
+
+- Specs: `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`
+- Plans: `docs/superpowers/plans/YYYY-MM-DD-<feature>.md`
+- Project skills: `.cursor/skills/<name>/SKILL.md`
+- Official Remotion skills: installed via `npx skills add remotion-dev/skills`
+- Prefer Context7 MCP for live Remotion / React docs over stale training data
+
+When adding a new agent skill for this project, put it under `.cursor/skills/` (project-scoped), not `~/.cursor/skills-cursor/`.

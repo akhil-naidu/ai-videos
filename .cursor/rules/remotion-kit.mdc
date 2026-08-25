@@ -1,0 +1,42 @@
+---
+description: Conventions for Remotion kit components and compositions
+globs: src/**/*.{ts,tsx},presentations/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Remotion kit & compositions
+
+## Kit (`src/kit/`)
+
+- `SkeletonScreen` — layout chrome + pulsing blocks; accept layout variant props.
+- `WireConnector` — animated path draw (stroke-dashoffset / interpolate).
+- `PageTransition` — use with `@remotion/transitions` `TransitionSeries`.
+- Keep presentational; timing from local frame; content via props.
+
+## Presentations (`presentations/<slug>/`)
+
+```
+presentations/<slug>/
+  meta.ts          # title, description, formats
+  Demo.tsx         # or Main.tsx — Series of scenes
+  scenes/          # one file per page/scene
+```
+
+## Formats
+
+Import presets from `src/formats.ts`. Register compositions for needed variants:
+
+- `16x9-1080`, `16x9-4k`, `9x16-1080`, `9x16-4k`
+- FPS 30
+
+Same component tree; only width/height change.
+
+## Studio editability
+
+Prefer Zod schemas / inlined `defaultProps` on `<Composition>` for assets and copy so Studio can swap files after generation.
+
+## Avoid
+
+- Hard-coded absolute frame offsets duplicated across scenes — prefer `Series` / `TransitionSeries`.
+- Global CSS that breaks Remotion AbsoluteFill layouts.
+- Cards/dashboard chrome in hero-style scenes unless the scene is interactive UI demo.
