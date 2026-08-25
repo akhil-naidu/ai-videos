@@ -27,3 +27,6 @@ Remotion app for programmatic presentation videos. Presentations live under `pre
 
 - Studio: `npm run studio` (or bun equivalent) → `http://localhost:3000`
 - Viewer: `npm run viewer` → local gallery
+
+## Explainer override (2026-08-25)
+New videos follow docs/style/visual-system.md. beats.md is required before Main.tsx. Use explainer tokens. See .cursor/rules/explainer-system.mdc.

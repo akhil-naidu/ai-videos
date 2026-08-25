@@ -81,3 +81,6 @@ v2 (do not build unless asked): automated alignment from transcript timestamps.
 
 - Folder + registration patterns: [reference.md](reference.md)
 - Format presets: `src/formats.ts`
+
+## House style (mandatory)
+Read docs/style/visual-system.md first. Write beats.md before Main.tsx. Watch references/ailabs/clips if unsure.

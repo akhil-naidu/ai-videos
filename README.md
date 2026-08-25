@@ -31,3 +31,7 @@ npm run viewer    # http://localhost:5173 — presentation gallery
 ## Agent docs
 
 See `AGENTS.md` and `docs/superpowers/specs/2026-08-25-remotion-presentation-system-design.md`.
+
+## House style
+Every new video follows docs/style/visual-system.md and references/ailabs/.
+Beat sheet first. VO first. Designed diagrams plus real proof screenshots.

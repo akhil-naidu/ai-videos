@@ -42,3 +42,10 @@ Project rules live in `.cursor/rules/`:
 ## Recommended Cursor plugins / MCP
 
 See `.cursor/plugins.md`.
+
+## House style (2026-08-25)
+Mandatory: docs/style/visual-system.md
+Analysis: docs/superpowers/specs/2026-08-25-ailabs-explainer-system-design.md
+References: references/ailabs/
+Always-on rule: .cursor/rules/explainer-system.mdc
+New video: write presentations/slug/beats.md first, then scenes from the kit.

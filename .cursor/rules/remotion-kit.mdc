@@ -40,3 +40,6 @@ Prefer Zod schemas / inlined `defaultProps` on `<Composition>` for assets and co
 - Hard-coded absolute frame offsets duplicated across scenes — prefer `Series` / `TransitionSeries`.
 - Global CSS that breaks Remotion AbsoluteFill layouts.
 - Cards/dashboard chrome in hero-style scenes unless the scene is interactive UI demo.
+
+## Explainer components
+Named kit to grow: CompareCards, FlowLoop, PipelineCards, FanOut, CounterBar, ProofScreencap, SlashChip, SyntheticCursor. beats.md is required in each presentation folder.

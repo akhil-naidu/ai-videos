@@ -1,0 +1,31 @@
+---
+description: Mandatory AI LABS-style explainer language for every video in this repo
+alwaysApply: true
+---
+
+# Explainer system (always on)
+
+This repo makes VO-first Remotion explainers in the AI LABS production language.
+
+Read before any scene work:
+
+1. `docs/style/visual-system.md`
+2. `references/ailabs/README.md`
+3. Project skill `.cursor/skills/remotion-presentation/SKILL.md`
+
+## Hard rules
+
+- No talking head, no facecam, no lower thirds, no mascots in the body.
+- Beat sheet first: `presentations/<slug>/beats.md`. No `Main.tsx` until it exists.
+- Every beat is `diagram` | `mock` | `screencap`.
+- Use only components listed in `docs/style/visual-system.md`. If you need a new one, add it to the kit and that list first.
+- Proof screenshots are real files. Do not invent GitHub/X/docs UI.
+- Cursor is synthetic (kit), never a raw mouse recording.
+- Motion is data-driven (counters, progress, trees, status). No decorative-only motion.
+- New video = new copy + new proof stills. Same chrome, tokens, easing.
+- Tokens: `explainer` from `src/kit/theme.ts` for new explainers. Do not introduce a second palette.
+- Primary ship format is 16:9 at 30fps (1080 to preview, 4K to publish).
+
+## References
+
+Watch `references/ailabs/clips/` when unsure. Match that language, not a generic tech-YouTube template.

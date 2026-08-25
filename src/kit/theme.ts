@@ -14,3 +14,15 @@ export const theme = {
 } as const;
 
 export type Theme = typeof theme;
+
+export const explainer = {
+  bg: "#000000",
+  bgElevated: "#161616",
+  text: "#f2f2f2",
+  chip: "#f5d400",
+  success: "#3ddc84",
+  fail: "#e06a4e",
+  warning: "#f07a3d",
+  active: "#4c8dff",
+} as const;
+export type ExplainerTheme = typeof explainer;

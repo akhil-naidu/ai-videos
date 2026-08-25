@@ -6,3 +6,5 @@ export { WireConnector } from "./WireConnector";
 export type { Point } from "./WireConnector";
 export { PageTransition } from "./PageTransition";
 export type { PageTransitionMode } from "./PageTransition";
+export { explainer } from "./theme";
+export type { ExplainerTheme } from "./theme";
