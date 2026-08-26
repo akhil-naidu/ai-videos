@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Easing,
-  interpolate,
-  useCurrentFrame,
-} from "remotion";
+import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { fadeUp } from "./motion";
 import { explainer } from "./theme";
 
 /** Centered stage — AI LABS negative space around a mid-canvas idea. */
@@ -42,28 +38,25 @@ type EnterProps = {
 export const Enter: React.FC<EnterProps> = ({
   children,
   delay = 0,
-  duration = 18,
+  duration = 14,
 }) => {
   const frame = useCurrentFrame();
-  const t = interpolate(frame, [delay, delay + duration], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.bezier(0.16, 1, 0.3, 1),
-  });
-  return (
-    <div
-      style={{
-        opacity: t,
-        transform: `translateY(${(1 - t) * 16}px)`,
-      }}
-    >
-      {children}
-    </div>
-  );
+  const style = fadeUp(frame, delay, duration);
+  return <div style={style}>{children}</div>;
 };
 
 export const cardStyle: React.CSSProperties = {
   background: explainer.bgElevated,
-  borderRadius: 16,
+  borderRadius: 14,
   padding: 24,
+  border: "1px solid #2a2a2a",
+  boxShadow: "0 12px 40px rgba(0,0,0,0.45)",
+};
+
+export const browserChrome: React.CSSProperties = {
+  borderRadius: 14,
+  overflow: "hidden",
+  border: "1px solid #2a2a2a",
+  boxShadow: "0 24px 80px rgba(0,0,0,0.55)",
+  background: "#0d1117",
 };

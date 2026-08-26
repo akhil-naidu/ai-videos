@@ -12,15 +12,15 @@
     "studioPath": "/demo-architecture-16x9-1080"
   },
   {
-    "id": "dflow-flagship",
-    "title": "dFlow Flagship",
-    "description": "AI LABS–style — logos, centered diagrams, VO-ready. Drop audio in public/dflow-flagship/.",
+    "id": "ailabs-unlazy-intro",
+    "title": "AI LABS — unlazy intro (reference)",
+    "description": "Recreation of c47uqR7XB_c intro clip with extracted VO and GitHub proof stills.",
     "compositions": [
-      "dflow-flagship-16x9-1080",
-      "dflow-flagship-16x9-4k",
-      "dflow-flagship-9x16-1080",
-      "dflow-flagship-9x16-4k"
+      "ailabs-unlazy-intro-16x9-1080",
+      "ailabs-unlazy-intro-16x9-4k",
+      "ailabs-unlazy-intro-9x16-1080",
+      "ailabs-unlazy-intro-9x16-4k"
     ],
-    "studioPath": "/dflow-flagship-16x9-1080"
+    "studioPath": "/ailabs-unlazy-intro-16x9-1080"
   }
 ]
