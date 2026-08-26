@@ -30,3 +30,5 @@ export type { CursorPoint, SyntheticCursorProps } from "./SyntheticCursor";
 export { WorkingCompare } from "./WorkingCompare";
 export { ParallelFanOut } from "./ParallelFanOut";
 export { SkillLandingMock } from "./SkillLandingMock";
+
+export { CycleLoop } from "./CycleLoop";

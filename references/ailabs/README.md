@@ -21,6 +21,8 @@ Source channel: [AI LABS](https://www.youtube.com/@AILABS-393) (`UCelfWQr9sXVMTv
 | `clips/H7t3uUp3HVw-mid.mp4` | same, 1:30-2:15 | Sequential vs parallel, cost/token counters, fan-out |
 | `clips/Ysr7oNDajJI-intro.mp4` | design skills, 0:00-0:45 | Abstract list + product mock |
 | `clips/Ysr7oNDajJI-mid.mp4` | same, 1:30-2:15 | Synthetic cursor, mug click, Animate stepper, docs highlight |
+| `clips/PLyRe6Zk--8-intro.mp4` | loop engineering, 0:00-0:45 | Circular Plan/Build/Check/Improve cycle, numbered loop levels, chapter list |
+| `clips/PLyRe6Zk--8-mid.mp4` | same, 1:30-2:15 | Human-in-the-loop, agent product mock, duration compare |
 
 ## Stills
 
@@ -31,6 +33,9 @@ Source channel: [AI LABS](https://www.youtube.com/@AILABS-393) (`UCelfWQr9sXVMTv
 | `stills/animate-stepper.jpg` | Mock UI + stepper |
 | `stills/github-screencap.jpg` | ProofScreencap (GitHub) |
 | `stills/x-screencap.jpg` | ProofScreencap (X) |
+| `stills/agent-cycle.jpg` | CycleLoop (Plan → Build → Check → Improve hub) |
+| `stills/loop-levels.jpg` | Numbered loop-level rows (01 / 02 / 03) |
+| `stills/duration-compare.jpg` | Older vs new model duration histogram |
 
 ## Thumbnails (identity only)
 

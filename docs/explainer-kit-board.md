@@ -13,7 +13,6 @@ Videos not mined. Newest unmined first. Daily pass takes the top row.
 
 | id | title | why next |
 |----|-------|----------|
-| `PLyRe6Zk--8` | Every Level Of Claude Code Loop Engineering Explained | Newer than mined set; loop motion |
 | `D_uojDHkbw4` | This Claude Skill Just Fixed Loop Engineering | Loop / retry language |
 | `bBlY5YOsKN8` | How To Use Claude Design To Build Beautiful Sites | Design / mock language |
 | `b9k-AE4v5yI` | This Claude Code Skill make Building 10x Faster | Skill walkthrough |
@@ -30,6 +29,7 @@ Refs on disk under `references/ailabs/`. Do not re-download.
 
 | id | title | on disk | motion noted |
 |----|-------|---------|--------------|
+| `PLyRe6Zk--8` | Every Level Of Claude Code Loop Engineering Explained | intro + mid clips, thumb, stills (`agent-cycle`, `loop-levels`, `duration-compare`) | CycleLoop (circular Plan/Build/Check/Improve + hub timer/pass). Numbered 01/02/03 loop-level rows (AbstractList-adjacent, not added). Duration histogram vs CounterBar. Human-in-the-loop / ProductMock / VS Code vs Warp compare already covered |
 | `Ysr7oNDajJI` | Insane Claude Design Skills You Need To Actually Build Beautiful Sites | intro + mid clips, thumb, stills (`animate-stepper`) | AbstractList, ProductMock, SyntheticCursor, mug click, Animate stepper |
 | `c47uqR7XB_c` | GitHub's #1 Trending Author's New Claude Skill Is Insane | intro + mid clips, thumb, stills (`fail-retry-loop`, `github-screencap`) | CompareCards, FlowLoop, ProofScreencap |
 | `H7t3uUp3HVw` | Anthropic Just Fixed Graph Engineering's Greatest Flaw | intro + mid clips, thumb, stills (`x-screencap`, `agent-fanout`) | ProofScreencap (X), FanOut, CounterBar, PipelineCards vs parallel |
@@ -63,6 +63,7 @@ Already in kit (moved to Done, not rebuilt): CompareCards, FlowLoop, PipelineCar
 | `PageTransition` | `src/kit/PageTransition.tsx` |
 | `SyntheticCursor` | `src/kit/SyntheticCursor.tsx` |
 | `ProofScreencap` | `src/kit/ProofScreencap.tsx` (kit `SyntheticCursor` overlay) |
+| `CycleLoop` | `src/kit/CycleLoop.tsx` |
 
 ## Notes
 
